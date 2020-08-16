@@ -22,6 +22,7 @@ namespace SeaWar
         //        _deck = value;
         //    }
         //}
+
         /// <summary>
         /// Returns Deck quantity
         /// </summary>
@@ -47,9 +48,12 @@ namespace SeaWar
         {
             throw new NotImplementedException();
         }
-        public Ship()
+        public Ship(Point position, ShipDirection direction, int deckQuantity)
         {
-
+            this.Position = position;
+            this.Direction = direction;
+            this.DeckQuantity = deckQuantity;
+            this.State = ShipState.Live;
         }
     }
 
