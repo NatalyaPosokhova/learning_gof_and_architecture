@@ -15,5 +15,22 @@ namespace SeaWar
         {
             this.Name = name;
         }
+        /// <summary>
+        /// Allows User to shoot on the Rival's board
+        /// </summary>
+        /// <param name="point"></param>
+        /// <returns></returns>
+        public string MakeShoot(Point point)
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Allows place sheep on the user's board
+        /// </summary>
+        /// <param name="ship"></param>
+        public void PlaceSheep(Ship ship)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
