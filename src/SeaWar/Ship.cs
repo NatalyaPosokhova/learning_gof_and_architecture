@@ -57,7 +57,7 @@ namespace SeaWar
     public enum ShipDirection { Vertical, Horizontal};
     public struct Point
     {
-        public int x;
+        public char x;
         public int y;
     }
 }
