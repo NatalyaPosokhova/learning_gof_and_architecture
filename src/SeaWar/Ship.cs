@@ -47,9 +47,12 @@ namespace SeaWar
         {
             throw new NotImplementedException();
         }
-        public Ship()
+        public Ship(Point position, int deckQuantity, ShipDirection direction)
         {
-
+            this.Position = position;
+            this.DeckQuantity = deckQuantity;
+            this.Direction = direction;
+            this.State = ShipState.Live;
         }
     }
 
