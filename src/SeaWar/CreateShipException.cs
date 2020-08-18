@@ -7,6 +7,6 @@ namespace SeaWar
 {
     public class CreateShipException : Exception
     {
-
+        string UnacceptablePlaceException = "Unacceptable Ship Place";
     }
 }
