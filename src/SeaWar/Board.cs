@@ -9,7 +9,7 @@ namespace SeaWar
     {
         private const int boardSize = 10;
         private List<Ship> shipsList = new List<Ship>();
-        public bool CheckRuleCapabilities(Point point, ShipDirection direction, int deckQuantity)
+        public bool CheckRuleCapabilities(Point point, int deckQuantity, ShipDirection direction)
         {
             bool result = true;
             if(direction == ShipDirection.Vertical)
@@ -28,12 +28,13 @@ namespace SeaWar
             }
             return result;
         }
-        public void CreateShip(Point point, ShipDirection direction, int deckQuantity)
+        public void CreateShip(Point point, int deckQuantity, ShipDirection direction)
         {
-            if(!CheckRuleCapabilities(point, direction, deckQuantity))
+            if(!CheckRuleCapabilities(point, deckQuantity, direction))
             {
                 throw new CreateShipException();
             }
+            Ship ship = new Ship(point, deckQuantity, direction);
         }
     }
 }
