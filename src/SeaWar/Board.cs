@@ -9,76 +9,38 @@ namespace SeaWar
     {
         private const int boardSize = 10;
         private List<Ship> shipsList = new List<Ship>();
-        public bool CheckRuleCapabilities(Point point, int deckQuantity, ShipDirection direction)
+        public bool CheckRuleCapabilities(Point candidatePoint, int candidateDeckQuantity, ShipDirection candidateDirection)
         {
             bool result = true;
 
             //Check that there are no other ships in this place
-            foreach(Ship ship in shipsList)
+            foreach(Ship currentShip in shipsList)
             {
-                if(ship.Direction == direction) //Ships have the same direction
-                {
-                    if(direction == ShipDirection.Vertical && point.x == ship.Position.x)//Ships are located on one vertical line
+                for (var candidateShipDeck = 0; candidateShipDeck < candidateDeckQuantity; candidateShipDeck++)
+                    for (var currentShipDeck = 0; currentShipDeck < currentShip.DeckQuantity; currentShipDeck++)
                     {
-                        if(point.y > ship.Position.y && (ship.Position.y + ship.DeckQuantity - 1) >= point.y ||
-                           point.y < ship.Position.y && (point.y + deckQuantity - 1) >= ship.Position.y      ||
-                           point.y == ship.Position.y)
+                        var candidateX = candidatePoint.x + candidateDirection == ShipDirection.Horizontal ? candidateShipDeck : 0;
+                        var candidateY = candidatePoint.y + candidateDirection == ShipDirection.Horizontal ? 0 : candidateShipDeck;
+                        var currentX = currentShip.Position.x + currentShip.Direction == ShipDirection.Horizontal ? currentShipDeck : 0;
+                        var currentY = currentShip.Position.y + currentShip.Direction == ShipDirection.Horizontal ? 0 : currentShipDeck;
+                        if (candidateX == currentX && candidateY == currentY)
                         {
                             result = false;
                         }
                     }
-                    else//Ships are located on one horizontal line
-                    {
-                        if (point.x > ship.Position.x && (ship.Position.x + ship.DeckQuantity - 1) >= point.x ||
-                            point.x < ship.Position.x && (point.x + deckQuantity - 1) >= ship.Position.x      ||
-                            point.x == ship.Position.x)
-                        {
-                            result = false;
-                        }
-                    }
-                }
-                else //Ships have different direction
-                {
-                    if (direction == ShipDirection.Vertical)
-                    {
-                        for(var firstShipDeck = point.y; firstShipDeck < point.y + deckQuantity; firstShipDeck++)
-                        {
-                            for (var secondShipDeck = ship.Position.x; secondShipDeck < ship.Position.x + ship.DeckQuantity; secondShipDeck++)
-                            {
-                                if(firstShipDeck == secondShipDeck)
-                                {
-                                    result = false;
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (var firstShipDeck = point.x; firstShipDeck < point.x + deckQuantity; firstShipDeck++)
-                        {
-                            for (var secondShipDeck = ship.Position.y; secondShipDeck < ship.Position.y + ship.DeckQuantity; secondShipDeck++)
-                            {
-                                if (firstShipDeck == secondShipDeck)
-                                {
-                                    result = false;
-                                }
-                            }
-                        }
-                    }
-                }
             }
 
-            //Check that ship is inside borders
-            if(direction == ShipDirection.Vertical)
+            //Check that currentShip is inside borders
+            if(candidateDirection == ShipDirection.Vertical)
             {
-                if((point.y + deckQuantity - 1) >= boardSize)
+                if((candidatePoint.y + candidateDeckQuantity - 1) >= boardSize)
                 {
                     result = false;
                 }
             }
             else
             {
-                if((point.x + deckQuantity - 1) >= boardSize)
+                if((candidatePoint.x + candidateDeckQuantity - 1) >= boardSize)
                 {
                     result = false;
                 }
