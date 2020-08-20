@@ -12,7 +12,7 @@ namespace SeaWar
 
         }
 
-        public override bool MakeShoot(Point point)
+        public override Point GetShoot()
         {
             throw new NotImplementedException();
         }

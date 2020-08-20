@@ -12,6 +12,6 @@ namespace SeaWar
         {
             this.Name = name;
         }
-        public abstract bool MakeShoot(Point point);       
+        public abstract Point GetShoot();       
     }
 }
