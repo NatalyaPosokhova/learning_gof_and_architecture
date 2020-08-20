@@ -9,12 +9,29 @@ namespace SeaWar
     {
         private const int boardSize = 10;
         private List<Ship> shipsList = new List<Ship>();
+        /// <summary>
+        /// Checks that ship is mutch rules
+        /// </summary>
+        /// <param name="candidatePoint">Ship candidate coordinates</param>
+        /// <param name="candidateDeckQuantity">Ship candidate deck quantity</param>
+        /// <param name="candidateDirection">Ship candidate direction</param>
+        /// <returns>True if ship mutches rules, otherwise - false</returns>
         public bool CheckRuleCapabilities(Point candidatePoint, int candidateDeckQuantity, ShipDirection candidateDirection)
         {
-            bool result = true;
-
+            return IsShipNotCrossing(candidatePoint, candidateDeckQuantity, candidateDirection) &&
+            IsShipInsideBounds(candidatePoint, candidateDeckQuantity, candidateDirection);
+        }
+        /// <summary>
+        /// Checks that ship is not crossing with another ships
+        /// </summary>
+        /// <param name="candidatePoint">Ship candidate deck quantity</param>
+        /// <param name="candidateDeckQuantity">Ship candidate direction</param>
+        /// <param name="candidateDirection">Ship candidate direction</param>
+        /// <returns>True if ship is not crossing another ships, otherwise - false</returns>
+        private bool IsShipNotCrossing(Point candidatePoint, int candidateDeckQuantity, ShipDirection candidateDirection)
+        {
             //Check that there are no other ships in this place
-            foreach(Ship currentShip in shipsList)
+            foreach (Ship currentShip in shipsList)
             {
                 for (var candidateShipDeck = 0; candidateShipDeck < candidateDeckQuantity; candidateShipDeck++)
                     for (var currentShipDeck = 0; currentShipDeck < currentShip.DeckQuantity; currentShipDeck++)
@@ -25,36 +42,50 @@ namespace SeaWar
                         var currentY = currentShip.Position.y + currentShip.Direction == ShipDirection.Horizontal ? 0 : currentShipDeck;
                         if (candidateX == currentX && candidateY == currentY)
                         {
-                            result = false;
+                            return false;
                         }
                     }
             }
-
-            //Check that currentShip is inside borders
-            if(candidateDirection == ShipDirection.Vertical)
-            {
-                if((candidatePoint.y + candidateDeckQuantity - 1) >= boardSize)
-                {
-                    result = false;
-                }
-            }
-            else
-            {
-                if((candidatePoint.x + candidateDeckQuantity - 1) >= boardSize)
-                {
-                    result = false;
-                }
-            }
-            return result;
+            return true;
         }
+        /// <summary>
+        /// Checks that ship is inside borders
+        /// </summary>
+        /// <param name="candidatePoint">Ship candidate deck quantity</param>
+        /// <param name="candidateDeckQuantity">Ship candidate direction</param>
+        /// <param name="candidateDirection">Ship candidate direction</param>
+        /// <returns>True if ship is not crossing borders, otherwise - false</returns>
+        private static bool IsShipInsideBounds(Point candidatePoint, int candidateDeckQuantity, ShipDirection candidateDirection)
+        {
+            var isVertical = candidateDirection == ShipDirection.Vertical;
+            return ((isVertical ? candidatePoint.y : candidatePoint.x) + candidateDeckQuantity - 1) < boardSize;
+        }
+
+        /// <summary>
+        /// Creates ship object if it mutches rules
+        /// </summary>
+        /// <param name="point"></param>
+        /// <param name="deckQuantity"></param>
+        /// <param name="direction"></param>
         public void CreateShip(Point point, int deckQuantity, ShipDirection direction)
         {
             if(!CheckRuleCapabilities(point, deckQuantity, direction))
             {
-                throw new CreateShipException();
+                throw new CreateShipException("Coordinates don't match rules");
             }
 
             shipsList.Add(new Ship(point, deckQuantity, direction));
+        }
+
+        public void MakeShoot(Point shootCoord)
+        {
+            foreach(var currenShip in shipsList)
+            {
+                if (currenShip.CheckShooting(shootCoord))
+                {
+                    break;
+                }
+            }
         }
     }
 }

@@ -7,13 +7,10 @@ namespace SeaWar
 {
     public class CreateShipException : Exception
     {
-        //public string UnacceptablePlaceException()
-        //{
-        //    return "Unacceptable Ship Place";
-        //}
-        //public UnacceptablePlaceException(String message) : base(message) 
-        //{
-        //    return "Unacceptable Ship Place";
-        //}
+        public CreateShipException(string message, Exception e = null) : base(message, e)
+        {
+            
+        }
+       
     }
 }
