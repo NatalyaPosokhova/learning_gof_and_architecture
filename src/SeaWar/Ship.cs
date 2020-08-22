@@ -45,7 +45,17 @@ namespace SeaWar
         /// <returns></returns>
         public bool CheckShooting(Point point)
         {
-            throw new NotImplementedException();
+            for (var currentDeck = 0; currentDeck < DeckQuantity; currentDeck++)
+            {
+                var currentPositionX = Position.x + Direction == ShipDirection.Horizontal ? currentDeck : 0;
+                var currentPositionY = Position.y + Direction == ShipDirection.Horizontal ? 0 : currentDeck;
+
+                if (currentPositionX == point.x && currentPositionY == point.y)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         public Ship(Point position, int deckQuantity, ShipDirection direction)
         {
