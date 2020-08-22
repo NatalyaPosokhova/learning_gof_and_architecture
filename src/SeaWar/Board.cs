@@ -90,7 +90,15 @@ namespace SeaWar
 
         public bool IsAllShipsDied()
         {
-            throw new NotImplementedException();
+            bool result = true;
+            foreach(var currentShip in shipsList)
+            {
+                if(currentShip.State == ShipState.Live || currentShip.State == ShipState.Injured)
+                {
+                    result = false;
+                }
+            }
+            return result;
         }
     }
 }
