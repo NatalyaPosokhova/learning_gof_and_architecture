@@ -20,7 +20,7 @@ namespace SeaWar
             {
                 throw new CreateShipException("Quantity of Boards and Players should be equal 2");
             }
-            while (_boards[0].IsAllShipsDied() || _boards[1].IsAllShipsDied())
+            while (!_boards[0].IsAllShipsDied() || !_boards[1].IsAllShipsDied())
             {
                 var shootCoord = _players[0].GetShoot();
                 _boards[1].MakeShoot(shootCoord);
