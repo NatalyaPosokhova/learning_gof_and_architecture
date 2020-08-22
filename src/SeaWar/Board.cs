@@ -87,7 +87,10 @@ namespace SeaWar
                 }
             }
         }
-
+        /// <summary>
+        /// Checks that all ships were killed
+        /// </summary>
+        /// <returns>True if all ships are died</returns>
         public bool IsAllShipsDied()
         {
             bool result = true;
