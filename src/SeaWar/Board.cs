@@ -62,7 +62,7 @@ namespace SeaWar
         }
 
         /// <summary>
-        /// Creates ship object if it mutches rules
+        /// Creates ship object if it matches rules
         /// </summary>
         /// <param name="point"></param>
         /// <param name="deckQuantity"></param>
@@ -86,6 +86,11 @@ namespace SeaWar
                     break;
                 }
             }
+        }
+
+        public bool IsAllShipsDied()
+        {
+            throw new NotImplementedException();
         }
     }
 }

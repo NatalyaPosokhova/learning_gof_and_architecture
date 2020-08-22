@@ -16,7 +16,18 @@ namespace SeaWar
         }
         public void Run()
         {
-            throw new NotImplementedException();
+            if (_boards.Count() != 2 && _players.Count() != 2)
+            {
+                throw new CreateShipException("Quantity of Boards and Players should be equal 2");
+            }
+            while (_boards[0].IsAllShipsDied() || _boards[1].IsAllShipsDied())
+            {
+                var shootCoord = _players[0].GetShoot();
+                _boards[1].MakeShoot(shootCoord);
+
+                shootCoord = _players[1].GetShoot();
+                _boards[0].MakeShoot(shootCoord);
+            }
         }
     }
 }
