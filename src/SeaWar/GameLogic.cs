@@ -14,6 +14,9 @@ namespace SeaWar
             _players = Players;
             _boards = Boards;
         }
+        /// <summary>
+        /// Sets order of play
+        /// </summary>
         public void Run()
         {
             if (_boards.Count() != 2 && _players.Count() != 2)
