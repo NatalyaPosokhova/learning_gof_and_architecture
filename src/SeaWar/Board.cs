@@ -10,7 +10,7 @@ namespace SeaWar
         private const int boardSize = 10;
         private List<Ship> shipsList = new List<Ship>();
         /// <summary>
-        /// Checks that ship is mutch rules
+        /// Checks that ship is mutch rules.
         /// </summary>
         /// <param name="candidatePoint">Ship candidate coordinates</param>
         /// <param name="candidateDeckQuantity">Ship candidate deck quantity</param>
@@ -22,7 +22,7 @@ namespace SeaWar
             IsShipInsideBounds(candidatePoint, candidateDeckQuantity, candidateDirection);
         }
         /// <summary>
-        /// Checks that ship is not crossing with another ships
+        /// Checks that ship is not crossing with another ships.
         /// </summary>
         /// <param name="candidatePoint">Ship candidate deck quantity</param>
         /// <param name="candidateDeckQuantity">Ship candidate direction</param>
@@ -49,7 +49,7 @@ namespace SeaWar
             return true;
         }
         /// <summary>
-        /// Checks that ship is inside borders
+        /// Checks that ship is inside borders.
         /// </summary>
         /// <param name="candidatePoint">Ship candidate deck quantity</param>
         /// <param name="candidateDeckQuantity">Ship candidate direction</param>
@@ -62,7 +62,7 @@ namespace SeaWar
         }
 
         /// <summary>
-        /// Creates ship object if it matches rules
+        /// Creates ship object if it matches rules.
         /// </summary>
         /// <param name="point"></param>
         /// <param name="deckQuantity"></param>
@@ -77,7 +77,7 @@ namespace SeaWar
             shipsList.Add(new Ship(point, deckQuantity, direction));
         }
         /// <summary>
-        /// Makes shoot
+        /// Makes shoot by ships on the board.
         /// </summary>
         /// <param name="shootCoord">Shoot point coordinates</param>
         public void MakeShoot(Point shootCoord)
@@ -91,7 +91,7 @@ namespace SeaWar
             }
         }
         /// <summary>
-        /// Checks that all ships were killed
+        /// Checks that all ships were killed.
         /// </summary>
         /// <returns>True if all ships are died</returns>
         public bool IsAllShipsDied()
