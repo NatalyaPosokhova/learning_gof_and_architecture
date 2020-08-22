@@ -76,7 +76,10 @@ namespace SeaWar
 
             shipsList.Add(new Ship(point, deckQuantity, direction));
         }
-
+        /// <summary>
+        /// Makes shoot
+        /// </summary>
+        /// <param name="shootCoord">Shoot point coordinates</param>
         public void MakeShoot(Point shootCoord)
         {
             foreach(var currenShip in shipsList)
