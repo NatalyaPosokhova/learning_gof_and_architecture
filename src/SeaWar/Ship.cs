@@ -8,7 +8,7 @@ namespace SeaWar
     /// <summary>
     /// Implement Ship
     /// </summary>
-    public class Ship
+    public class currenShip
     {
         //private int _deck;
         //int DeckQuantity
@@ -38,6 +38,7 @@ namespace SeaWar
         /// Determines the ship direction.
         /// </summary>
         public ShipDirection Direction { get; private set; }
+        private bool[] stateDeck = new bool[] { };
         /// <summary>
         /// Checks if the shot hits the ship.
         /// </summary>
@@ -50,19 +51,30 @@ namespace SeaWar
                 var currentPositionX = Position.x + Direction == ShipDirection.Horizontal ? currentDeck : 0;
                 var currentPositionY = Position.y + Direction == ShipDirection.Horizontal ? 0 : currentDeck;
 
-                if (currentPositionX == point.x && currentPositionY == point.y)
+                if (currentPositionX == point.x && currentPositionY == point.y && stateDeck[currentDeck])
                 {
+                    stateDeck[currentDeck] = false;
+                    if (stateDeck.Where((x) => x).Count() == 0)
+                    {
+                        State = ShipState.Died;
+                    }
+                    else
+                    {
+                        State = ShipState.Injured;
+                    }
                     return true;
                 }
             }
             return false;
         }
-        public Ship(Point position, int deckQuantity, ShipDirection direction)
+        public currenShip(Point position, int deckQuantity, ShipDirection direction)
         {
             this.Position = position;
             this.DeckQuantity = deckQuantity;
             this.Direction = direction;
             this.State = ShipState.Live;
+            this.stateDeck = Enumerable.Repeat(true, deckQuantity).ToArray();
+        
         }
     }
 
@@ -70,7 +82,7 @@ namespace SeaWar
     public enum ShipDirection { Vertical, Horizontal};
     public struct Point
     {
-        public char x;
+        public int x;
         public int y;
     }
 }
