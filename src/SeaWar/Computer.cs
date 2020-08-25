@@ -7,6 +7,7 @@ namespace SeaWar
 {
     public class Computer : Player
     {
+        List<Point> positionList = new List<Point>();
         Random random;
         public Computer(string name) : base(name)
         {
@@ -16,9 +17,12 @@ namespace SeaWar
         public override Point GetShoot()
         {
             Point pt = new Point();
-            pt.x = random.Next(1, 9);
-            pt.y = random.Next(1, 9);
-
+            do
+            {
+                pt.x = random.Next(1, 9);
+                pt.y = random.Next(1, 9);
+            } while (positionList.Contains(pt));
+            positionList.Add(pt);
             return pt;
         }
     }
