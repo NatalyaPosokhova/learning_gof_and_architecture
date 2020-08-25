@@ -7,7 +7,6 @@ namespace SeaWar
 {
     public class Computer : Player
     {
-        private List<Point> = new List<Point>();
         Random random;
         public Computer(string name) : base(name)
         {
