@@ -25,5 +25,12 @@ namespace SeaWar.Tests
             ship.CheckShooting(new Point { x = 5, y = 4 });
             Assert.That(ship.State == ShipState.Injured);
         }
+
+        [Test]
+        public void MissedShootTest()
+        {
+            currentShip ship = new currentShip(new Point { x = 8, y = 8 }, 2, ShipDirection.Vertical);
+            Assert.IsFalse(ship.CheckShooting(new Point { x = 6, y = 6 }));
+        }
     }
 }
