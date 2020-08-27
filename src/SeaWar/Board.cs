@@ -16,7 +16,7 @@ namespace SeaWar
         /// <param name="candidateDeckQuantity">Ship candidate deck quantity</param>
         /// <param name="candidateDirection">Ship candidate direction</param>
         /// <returns>True if ship mutches rules, otherwise - false</returns>
-        public bool CheckRuleCapabilities(Point candidatePoint, int candidateDeckQuantity, ShipDirection candidateDirection)
+        private bool CheckRuleCapabilities(Point candidatePoint, int candidateDeckQuantity, ShipDirection candidateDirection)
         {
             return IsShipNotCrossing(candidatePoint, candidateDeckQuantity, candidateDirection) &&
             IsShipInsideBounds(candidatePoint, candidateDeckQuantity, candidateDirection);
