@@ -13,8 +13,7 @@ namespace SeaWar.Tests
         public void SuccessShipHitTest()
         {
             currentShip ship = new currentShip(new Point { x = 4, y = 4 }, 1, ShipDirection.Vertical);
-
-            Assert.AreEqual(ship.CheckShooting(new Point { x = 4, y = 4 }), true);
+            Assert.IsTrue(ship.CheckShooting(new Point { x = 4, y = 4 }));
             Assert.That(ship.State == ShipState.Died);
         }
 

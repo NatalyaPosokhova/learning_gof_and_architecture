@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="CheckShootingTests.cs" />
     <Compile Include="CreateShipTests.cs" />
+    <Compile Include="ComputerGetShootTests.cs" />
     <Compile Include="MakeShootTests.cs" />
+    <Compile Include="RunTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
