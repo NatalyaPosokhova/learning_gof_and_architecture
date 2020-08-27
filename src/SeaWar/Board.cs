@@ -8,7 +8,7 @@ namespace SeaWar
     public class Board
     {
         private const int boardSize = 10;
-        private List<currenShip> shipsList = new List<currenShip>();
+        private List<currentShip> shipsList = new List<currentShip>();
         /// <summary>
         /// Checks that ship is mutch rules.
         /// </summary>
@@ -31,7 +31,7 @@ namespace SeaWar
         private bool IsShipNotCrossing(Point candidatePoint, int candidateDeckQuantity, ShipDirection candidateDirection)
         {
             //Check that there are no other ships in this place
-            foreach (currenShip currentShip in shipsList)
+            foreach (currentShip currentShip in shipsList)
             {
                 for (var candidateShipDeck = 0; candidateShipDeck < candidateDeckQuantity; candidateShipDeck++)
                     for (var currentShipDeck = 0; currentShipDeck < currentShip.DeckQuantity; currentShipDeck++)
@@ -74,7 +74,7 @@ namespace SeaWar
                 throw new CreateShipException("Coordinates don't match rules");
             }
 
-            shipsList.Add(new currenShip(point, deckQuantity, direction));
+            shipsList.Add(new currentShip(point, deckQuantity, direction));
         }
         /// <summary>
         /// Makes shoot by ships on the board.

@@ -8,7 +8,7 @@ namespace SeaWar
     /// <summary>
     /// Implement Ship
     /// </summary>
-    public class currenShip
+    public class currentShip
     {
         //private int _deck;
         //int DeckQuantity
@@ -67,7 +67,7 @@ namespace SeaWar
             }
             return false;
         }
-        public currenShip(Point position, int deckQuantity, ShipDirection direction)
+        public currentShip(Point position, int deckQuantity, ShipDirection direction)
         {
             this.Position = position;
             this.DeckQuantity = deckQuantity;

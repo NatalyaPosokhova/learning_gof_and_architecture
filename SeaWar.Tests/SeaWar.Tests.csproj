@@ -44,6 +44,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckShootingTests.cs" />
     <Compile Include="CreateShipTests.cs" />
     <Compile Include="MakeShootTests.cs" />
   </ItemGroup>
