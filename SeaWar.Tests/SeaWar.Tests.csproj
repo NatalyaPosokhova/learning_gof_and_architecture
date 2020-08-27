@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateShipTests.cs" />
+    <Compile Include="MakeShootTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

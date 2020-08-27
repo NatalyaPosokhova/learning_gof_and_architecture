@@ -14,6 +14,7 @@ namespace SeaWar.Tests
     public class CreateShipTests
     {
         private Board board;
+
         [SetUp]
         public void boardCreationSetUp()
         {
