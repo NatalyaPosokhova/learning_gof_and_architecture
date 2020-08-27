@@ -21,19 +21,22 @@ namespace SeaWar.Tests
         }
 
         [Test]
-        public void CreateShipExceptionTest()
+        public void CreateShipExceptionOutBordersTest()
         {
-            
             Assert.Throws<CreateShipException>(() => board.CreateShip(new Point { x = 12, y = 4 }, 2, ShipDirection.Horizontal));
         }
 
         [Test]
         public void SuccessShipCreateTest()
         {
-            Board board = new Board();
             board.CreateShip(new Point { x = 4, y = 4 }, 4, ShipDirection.Vertical);
         }
 
         [Test]
+        public void CreateShipExceptionCrossAnotherShipTest()
+        {
+            board.CreateShip(new Point { x = 5, y = 2 }, 2, ShipDirection.Vertical);
+            Assert.Throws<CreateShipException>(() => board.CreateShip(new Point { x = 5, y = 2 }, 2, ShipDirection.Vertical));
+        }
     }
 }
