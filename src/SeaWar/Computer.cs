@@ -7,8 +7,8 @@ namespace SeaWar
 {
     public class Computer : Player
     {
-        List<Point> positionList = new List<Point>();
-        Random random;
+        private List<Point> positionList = new List<Point>();
+        private Random random;
         public Computer(string name) : base(name)
         {
             random = new Random();
@@ -22,6 +22,7 @@ namespace SeaWar
                 pt.x = random.Next(1, 9);
                 pt.y = random.Next(1, 9);
             } while (positionList.Contains(pt));
+
             positionList.Add(pt);
             return pt;
         }

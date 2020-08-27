@@ -44,7 +44,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestClass.cs" />
+    <Compile Include="CreateShipTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

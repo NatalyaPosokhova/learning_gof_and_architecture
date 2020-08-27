@@ -13,10 +13,17 @@ namespace SeaWar.Tests
     [TestFixture]
     public class CreateShipTests
     {
+        private Board board;
+        [SetUp]
+        public void boardCreationSetUp()
+        {
+            board = new Board();
+        }
+
         [Test]
         public void CreateShipExceptionTest()
         {
-            Board board = new Board();
+            
             Assert.Throws<CreateShipException>(() => board.CreateShip(new Point { x = 12, y = 4 }, 2, ShipDirection.Horizontal));
         }
 
@@ -25,7 +32,8 @@ namespace SeaWar.Tests
         {
             Board board = new Board();
             board.CreateShip(new Point { x = 4, y = 4 }, 4, ShipDirection.Vertical);
-
         }
+
+        [Test]
     }
 }
