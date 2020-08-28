@@ -17,10 +17,17 @@ namespace SeaWar.Tests
         }
 
         [Test]
-        public void MakeShootHitShipTest()
+        public void SuccessMakeShootHitShipTest()
         {
             board.CreateShip(new Point { x = 4, y = 4 }, 4, ShipDirection.Vertical);
             Assert.IsTrue(board.MakeShoot(new Point { x = 4, y = 4 }));
-        }       
+        }
+
+        [Test]
+        public void FailMakeShootHitShipTest()
+        {
+            board.CreateShip(new Point { x = 5, y = 3 }, 2, ShipDirection.Vertical);
+            Assert.IsFalse(board.MakeShoot(new Point { x = 3, y = 3 }));
+        }
     }
 }
