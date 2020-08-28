@@ -15,5 +15,12 @@ namespace SeaWar.Tests
         {
             board = new Board();
         }
+
+        [Test]
+        public void MakeShootHitShipTest()
+        {
+            board.CreateShip(new Point { x = 4, y = 4 }, 4, ShipDirection.Vertical);
+            Assert.IsTrue(board.MakeShoot(new Point { x = 4, y = 4 }));
+        }       
     }
 }
