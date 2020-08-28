@@ -6,7 +6,7 @@ using NUnit.Framework;
 using SeaWar;
 using System.Reflection;
 
-[assembly: AssemblyVersion("5.4.3.3")]
+[assembly: AssemblyVersion("1.0.0.1")]
 
 namespace SeaWar.Tests
 {

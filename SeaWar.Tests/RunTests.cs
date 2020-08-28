@@ -17,8 +17,8 @@ namespace SeaWar.Tests
         private Computer player2;
         private Board board1;
         private Board board2;
-        private List<Player> Players;
-        private List<Board> Boards;
+        private List<Player> PlayersList;
+        private List<Board> BoardsList;
 
 
         [SetUp]
@@ -28,22 +28,22 @@ namespace SeaWar.Tests
             player2 = new Computer("Computer2");
             board1 = new Board();
             board2 = new Board();
-            Players = new List<Player> { player1, player2 };
-            Boards = new List<Board> { board1, board2 };
-            logic = new GameLogic(Players, Boards);
+            PlayersList = new List<Player> { player1, player2 };
+            BoardsList = new List<Board> { board1, board2 };
+            logic = new GameLogic(PlayersList, BoardsList);
         }
 
         [Test]
-        public void CreateShopExceptionLotsBordersTest()
+        public void CreateShipExceptionLotsBordersTest()
         {
-            Boards.Add(new Board());
+            BoardsList.Add(new Board());
             Assert.Throws<CreateShipException>(() => logic.Run());
         }
 
         [Test]
-        public void CreateShopExceptionLotsPlayersTest()
+        public void CreateShipExceptionLotsPlayersTest()
         {
-            Players.Add(new Computer("Computer3"));
+            PlayersList.Add(new Computer("Computer3"));
             Assert.Throws<CreateShipException>(() => logic.Run());
         }
     }

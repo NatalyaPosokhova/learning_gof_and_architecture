@@ -13,9 +13,10 @@ namespace SeaWar.Tests
     public class ComputerGetShootTests
     {
         [Test]
-        public void TestMethod()
+        public void SuccessGetShootReturnNotNullTest()
         {
-
+            var computer = new Computer("Computer1");
+            Assert.IsNotNull(computer.GetShoot());
         }
     }
 }
