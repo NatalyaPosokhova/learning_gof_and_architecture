@@ -1,18 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A9E71FA2-5021-45ED-85DB-A890F77B11A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaWar", "SeaWar\SeaWar.csproj", "{F005F54C-D445-4535-9747-C5912E472EC8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F806D066-C6F9-4401-ABD5-167288ADE814}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SeaWar", "src\SeaWar\SeaWar.xproj", "{26BDDEB2-F124-42FA-A146-30050C2AAA9D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaWar.Tests", "SeaWar.Tests\SeaWar.Tests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaWar.Tests", "SeaWar.Tests\SeaWar.Tests.csproj", "{44974C15-9BE4-49AC-82DC-1E22DA1F58D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,19 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{26BDDEB2-F124-42FA-A146-30050C2AAA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26BDDEB2-F124-42FA-A146-30050C2AAA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26BDDEB2-F124-42FA-A146-30050C2AAA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26BDDEB2-F124-42FA-A146-30050C2AAA9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F005F54C-D445-4535-9747-C5912E472EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F005F54C-D445-4535-9747-C5912E472EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F005F54C-D445-4535-9747-C5912E472EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F005F54C-D445-4535-9747-C5912E472EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44974C15-9BE4-49AC-82DC-1E22DA1F58D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44974C15-9BE4-49AC-82DC-1E22DA1F58D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44974C15-9BE4-49AC-82DC-1E22DA1F58D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44974C15-9BE4-49AC-82DC-1E22DA1F58D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{26BDDEB2-F124-42FA-A146-30050C2AAA9D} = {A9E71FA2-5021-45ED-85DB-A890F77B11A6}
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65CCC82C-A739-4906-A529-A062D2D89B5B}
 	EndGlobalSection
 EndGlobal

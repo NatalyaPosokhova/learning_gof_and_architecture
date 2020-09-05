@@ -4,9 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using SeaWar;
-using System.Reflection;
-
-[assembly: AssemblyVersion("1.0.0.1")]
 
 namespace SeaWar.Tests
 {

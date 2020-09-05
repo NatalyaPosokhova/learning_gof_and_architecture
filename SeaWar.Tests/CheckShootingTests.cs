@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using SeaWar;
-using System.Reflection;
 
 namespace SeaWar.Tests
 {
