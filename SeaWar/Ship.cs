@@ -48,8 +48,8 @@ namespace SeaWar
         {
             for (var currentDeck = 0; currentDeck < DeckQuantity; currentDeck++)
             {
-                var currentPositionX = Position.x + Direction == ShipDirection.Horizontal ? currentDeck : 0;
-                var currentPositionY = Position.y + Direction == ShipDirection.Horizontal ? 0 : currentDeck;
+                var currentPositionX = Position.x + (Direction == ShipDirection.Horizontal ? currentDeck : 0);
+                var currentPositionY = Position.y + (Direction == ShipDirection.Horizontal ? 0 : currentDeck);
 
                 if (currentPositionX == point.x && currentPositionY == point.y && stateDeck[currentDeck])
                 {
