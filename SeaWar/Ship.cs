@@ -10,6 +10,17 @@ namespace SeaWar
     /// </summary>
     public class Ship
     {
+        public override bool Equals(object anotherObj)
+        {
+            var toCompareWith = anotherObj as Ship;
+            if (toCompareWith == null)
+                return false;
+            return DeckQuantity == toCompareWith.DeckQuantity &&
+                   Position.x == toCompareWith.Position.x &&
+                   Position.y == toCompareWith.Position.y &&
+                   Direction == toCompareWith.Direction;
+        }
+
         //private int _deck;
         //int DeckQuantity
         //{
