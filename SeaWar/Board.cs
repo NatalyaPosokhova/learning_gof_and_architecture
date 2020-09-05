@@ -8,7 +8,7 @@ namespace SeaWar
     public class Board
     {
         private const int boardSize = 10;
-        private List<currentShip> shipsList = new List<currentShip>();
+        private List<Ship> shipsList = new List<Ship>();
         /// <summary>
         /// Checks that ship is mutch rules.
         /// </summary>
@@ -31,7 +31,7 @@ namespace SeaWar
         private bool IsShipNotCrossing(Point candidatePoint, int candidateDeckQuantity, ShipDirection candidateDirection)
         {
             //Check that there are no other ships in this place
-            foreach (currentShip currentShip in shipsList)
+            foreach (Ship currentShip in shipsList)
             {
                 for (var candidateShipDeck = 0; candidateShipDeck < candidateDeckQuantity; candidateShipDeck++)
                     for (var currentShipDeck = 0; currentShipDeck < currentShip.DeckQuantity; currentShipDeck++)
@@ -69,12 +69,12 @@ namespace SeaWar
         /// <param name="direction"></param>
         public void CreateShip(Point point, int deckQuantity, ShipDirection direction)
         {
-            if(!CheckRuleCapabilities(point, deckQuantity, direction))
+            if (!CheckRuleCapabilities(point, deckQuantity, direction))
             {
                 throw new CreateShipException("Coordinates don't match rules");
             }
 
-            shipsList.Add(new currentShip(point, deckQuantity, direction));
+            shipsList.Add(new Ship(point, deckQuantity, direction));
         }
         /// <summary>
         /// Makes shoot by ships on the board.
@@ -82,11 +82,11 @@ namespace SeaWar
         /// <param name="shootCoord">Shoot point coordinates</param>
         public bool MakeShoot(Point shootCoord)
         {
-            foreach(var currenShip in shipsList)
+            foreach (var currenShip in shipsList)
             {
                 if (currenShip.CheckShooting(shootCoord))
                 {
-                    if(currenShip.State == ShipState.Died)
+                    if (currenShip.State == ShipState.Died)
                     {
                         shipsList.Remove(currenShip);
                     }
@@ -102,14 +102,23 @@ namespace SeaWar
         public bool IsAllShipsDied()
         {
             bool result = true;
-            foreach(var currentShip in shipsList)
+            foreach (var currentShip in shipsList)
             {
-                if(currentShip.State == ShipState.Live || currentShip.State == ShipState.Injured)
+                if (currentShip.State == ShipState.Live || currentShip.State == ShipState.Injured)
                 {
                     result = false;
                 }
             }
             return result;
+        }
+        public int GetShipsQuantity()
+        {
+            return shipsList.Count();
+        }
+
+        public Ship GetShip(Point position)
+        {
+            throw new NotImplementedException();
         }
     }
 }
