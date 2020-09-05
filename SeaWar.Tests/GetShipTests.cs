@@ -15,8 +15,8 @@ namespace SeaWar.Tests
         {
             var expectedShip = new Ship(new Point { x = 2, y = 3}, 4, ShipDirection.Vertical);
             Board board = new Board();
+            board.CreateShip(new Point { x = 2, y = 3 }, 4, ShipDirection.Vertical);
             Assert.AreEqual(board.GetShip(new Point { x = 2, y = 4 }), expectedShip);
-
         }
     }
 }

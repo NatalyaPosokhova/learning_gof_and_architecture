@@ -118,7 +118,30 @@ namespace SeaWar
 
         public Ship GetShip(Point position)
         {
-            throw new NotImplementedException();
+            foreach (var currShip in shipsList)
+            {
+                if (currShip.Direction == ShipDirection.Horizontal && currShip.Position.y == position.y)
+                {
+                    if (currShip.Position.x <= position.x && position.x < (currShip.Position.x + currShip.DeckQuantity))
+                    {
+                        return currShip;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                else
+                {
+                    var IsShipOnCurrVerticalLine = currShip.Direction == ShipDirection.Vertical && currShip.Position.x == position.x;
+                    var IsShipCrossPoint = currShip.Position.y <= position.y && position.y < (currShip.Position.y + currShip.DeckQuantity);
+                    if (IsShipOnCurrVerticalLine && IsShipCrossPoint)
+                    {
+                        return currShip;
+                    }
+                }
+            }
+            return null;
         }
     }
 }
