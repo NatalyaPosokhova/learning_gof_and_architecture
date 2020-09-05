@@ -46,5 +46,18 @@ namespace SeaWar.Tests
             PlayersList.Add(new Computer("Computer3"));
             Assert.Throws<CreateShipException>(() => logic.Run());
         }
+        [Test]
+        public void SuccessRunTest()
+        {
+            board1.CreateShip(new Point { x = 1, y = 2}, 4, ShipDirection.Horizontal);
+            board2.CreateShip(new Point { x = 3, y = 4 }, 3, ShipDirection.Vertical);
+
+            Assert.AreEqual(board1.GetShipsQuantity(), 1);
+            Assert.AreEqual(board2.GetShipsQuantity(), 1);
+
+            //logic.Run();
+            //Assert.IsFalse(board1.IsAllShipsDied());
+            //Assert.IsFalse(board2.IsAllShipsDied());
+        }
     }
 }

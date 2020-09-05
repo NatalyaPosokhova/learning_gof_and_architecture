@@ -17,7 +17,6 @@ namespace SeaWar
             {
                 return false;
             }
-
             return DeckQuantity == toCompareWith.DeckQuantity &&
                    Position.x == toCompareWith.Position.x &&
                    Position.y == toCompareWith.Position.y &&
