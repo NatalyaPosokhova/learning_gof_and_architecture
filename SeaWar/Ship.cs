@@ -14,7 +14,10 @@ namespace SeaWar
         {
             var toCompareWith = anotherObj as Ship;
             if (toCompareWith == null)
+            {
                 return false;
+            }
+
             return DeckQuantity == toCompareWith.DeckQuantity &&
                    Position.x == toCompareWith.Position.x &&
                    Position.y == toCompareWith.Position.y &&
