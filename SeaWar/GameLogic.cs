@@ -19,7 +19,7 @@ namespace SeaWar
         /// </summary>
         public void Run()
         {
-            if (_boards.Count() != 2 && _players.Count() != 2)
+            if (_boards.Count() != 2 || _players.Count() != 2)
             {
                 throw new CreateShipException("Quantity of Boards and Players should be equal 2");
             }
