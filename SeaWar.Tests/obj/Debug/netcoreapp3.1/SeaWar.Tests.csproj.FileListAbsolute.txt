@@ -1,7 +1,3 @@
-C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.csprojAssemblyReference.cache
-C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.AssemblyInfoInputs.cache
-C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.AssemblyInfo.cs
-C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.csproj.CoreCompileInputs.cache
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\bin\Debug\netcoreapp3.1\SeaWar.exe
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
@@ -93,6 +89,10 @@ C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\bin\Debug\netcoreapp3.1\zh
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\bin\Debug\netcoreapp3.1\SeaWar.dll
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\bin\Debug\netcoreapp3.1\SeaWar.pdb
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.csprojAssemblyReference.cache
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.AssemblyInfoInputs.cache
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.AssemblyInfo.cs
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.csproj.CoreCompileInputs.cache
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.csproj.CopyComplete
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.dll
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar.Tests\obj\Debug\netcoreapp3.1\SeaWar.Tests.pdb

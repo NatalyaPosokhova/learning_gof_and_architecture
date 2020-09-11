@@ -141,7 +141,7 @@ namespace SeaWar
                     }
                 }
             }
-            return null;
+            throw new ArgumentOutOfRangeException();
         }
     }
 }

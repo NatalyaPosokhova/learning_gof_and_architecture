@@ -1,13 +1,13 @@
-C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.AssemblyInfoInputs.cache
-C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.AssemblyInfo.cs
-C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.csproj.CoreCompileInputs.cache
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\bin\Debug\netcoreapp3.1\SeaWar.exe
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\bin\Debug\netcoreapp3.1\SeaWar.deps.json
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\bin\Debug\netcoreapp3.1\SeaWar.runtimeconfig.json
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\bin\Debug\netcoreapp3.1\SeaWar.runtimeconfig.dev.json
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\bin\Debug\netcoreapp3.1\SeaWar.dll
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\bin\Debug\netcoreapp3.1\SeaWar.pdb
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.csprojAssemblyReference.cache
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.AssemblyInfoInputs.cache
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.AssemblyInfo.cs
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.csproj.CoreCompileInputs.cache
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.dll
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.pdb
 C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.genruntimeconfig.cache
-C:\Users\NPosokhova\Source\Repos\sea_war\SeaWar\obj\Debug\netcoreapp3.1\SeaWar.csprojAssemblyReference.cache

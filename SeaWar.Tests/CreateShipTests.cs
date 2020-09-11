@@ -36,5 +36,19 @@ namespace SeaWar.Tests
             board.CreateShip(new Point { x = 5, y = 2 }, 2, ShipDirection.Vertical);
             Assert.Throws<CreateShipException>(() => board.CreateShip(new Point { x = 5, y = 2 }, 2, ShipDirection.Vertical));
         }
+
+        [Test]
+        public void TwoShipsAlongsideEachOtherHorizontalTest()
+        {
+            board.CreateShip(new Point { x = 1, y = 3 }, 3, ShipDirection.Horizontal);
+            Assert.Throws<CreateShipException>(() => board.CreateShip(new Point { x = 2, y = 2 }, 3, ShipDirection.Horizontal));
+        }
+
+        [Test]
+        public void TwoShipsAlongsideEachOtherVerticalTest()
+        {
+            board.CreateShip(new Point { x = 1, y = 1 }, 4, ShipDirection.Vertical);
+            Assert.Throws<CreateShipException>(() => board.CreateShip(new Point { x = 2, y = 3}, 3, ShipDirection.Vertical));
+        }
     }
 }
