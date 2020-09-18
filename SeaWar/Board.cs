@@ -73,7 +73,6 @@ namespace SeaWar
             {
                 throw new CreateShipException("Coordinates don't match rules");
             }
-
             shipsList.Add(new Ship(point, deckQuantity, direction));
         }
         /// <summary>
