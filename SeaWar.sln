@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeaWar", "SeaWar\SeaWar.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeaWar.Tests", "SeaWar.Tests\SeaWar.Tests.csproj", "{44974C15-9BE4-49AC-82DC-1E22DA1F58D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaWarView", "SeaWarView\SeaWarView.csproj", "{8378A556-E8DE-47D6-8352-A0242AEDD6B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{44974C15-9BE4-49AC-82DC-1E22DA1F58D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44974C15-9BE4-49AC-82DC-1E22DA1F58D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44974C15-9BE4-49AC-82DC-1E22DA1F58D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8378A556-E8DE-47D6-8352-A0242AEDD6B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8378A556-E8DE-47D6-8352-A0242AEDD6B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8378A556-E8DE-47D6-8352-A0242AEDD6B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8378A556-E8DE-47D6-8352-A0242AEDD6B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

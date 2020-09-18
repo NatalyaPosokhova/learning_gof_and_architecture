@@ -1,0 +1,16 @@
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\bin\Debug\netcoreapp3.1\SeaWarView.exe
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\bin\Debug\netcoreapp3.1\SeaWarView.deps.json
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\bin\Debug\netcoreapp3.1\SeaWarView.runtimeconfig.json
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\bin\Debug\netcoreapp3.1\SeaWarView.runtimeconfig.dev.json
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\bin\Debug\netcoreapp3.1\SeaWarView.dll
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\bin\Debug\netcoreapp3.1\SeaWarView.pdb
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.csprojAssemblyReference.cache
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.ButtleShip.resources
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.Properties.Resources.resources
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.csproj.GenerateResource.cache
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.AssemblyInfoInputs.cache
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.AssemblyInfo.cs
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.csproj.CoreCompileInputs.cache
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.dll
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.pdb
+C:\Users\NPosokhova\Source\Repos\sea_war\SeaWarView\obj\Debug\netcoreapp3.1\SeaWarView.genruntimeconfig.cache
