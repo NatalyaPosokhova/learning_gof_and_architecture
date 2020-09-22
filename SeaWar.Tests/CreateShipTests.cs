@@ -13,7 +13,7 @@ namespace SeaWar.Tests
         private Board board;
 
         [SetUp]
-        public void boardCreationSetUp()
+        public void BoardCreationSetUp()
         {
             board = new Board();
         }
@@ -49,6 +49,13 @@ namespace SeaWar.Tests
         {
             board.CreateShip(new Point { x = 1, y = 1 }, 4, ShipDirection.Vertical);
             Assert.Throws<CreateShipException>(() => board.CreateShip(new Point { x = 2, y = 3}, 3, ShipDirection.Vertical));
+        }
+
+        [Test]
+        public void SingleTwoShipsTest()
+        {
+            board.CreateShip(new Point { x = 1, y = 1 }, 1, ShipDirection.Horizontal);
+            board.CreateShip(new Point { x = 3, y = 4 }, 1, ShipDirection.Horizontal);
         }
     }
 }

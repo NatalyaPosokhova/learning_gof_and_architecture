@@ -231,10 +231,11 @@
             this.checkBox103 = new System.Windows.Forms.CheckBox();
             this.checkBox102 = new System.Windows.Forms.CheckBox();
             this.checkBox101 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.startGameButton = new System.Windows.Forms.Button();
             this.shipsListComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.userBoardtableLayoutPanel.SuspendLayout();
             this.opponentBoardTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -353,7 +354,7 @@
             this.userBoardtableLayoutPanel.Controls.Add(this.checkBox3, 2, 0);
             this.userBoardtableLayoutPanel.Controls.Add(this.checkBox2, 1, 0);
             this.userBoardtableLayoutPanel.Controls.Add(this.checkBox1, 0, 0);
-            this.userBoardtableLayoutPanel.Location = new System.Drawing.Point(57, 52);
+            this.userBoardtableLayoutPanel.Location = new System.Drawing.Point(61, 56);
             this.userBoardtableLayoutPanel.Name = "userBoardtableLayoutPanel";
             this.userBoardtableLayoutPanel.RowCount = 10;
             this.userBoardtableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1172,6 +1173,7 @@
             this.checkBox34.TabIndex = 0;
             this.checkBox34.Text = "checkBox34";
             this.checkBox34.UseVisualStyleBackColor = false;
+            this.checkBox34.CheckedChanged += new System.EventHandler(this.checkBox34_CheckedChanged);
             // 
             // checkBox33
             // 
@@ -1556,6 +1558,7 @@
             this.checkBox2.TabIndex = 0;
             this.checkBox2.Text = "checkBox2";
             this.checkBox2.UseVisualStyleBackColor = false;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -1568,6 +1571,7 @@
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // opponentBoardTableLayoutPanel
             // 
@@ -2699,14 +2703,15 @@
             this.checkBox101.Text = "checkBox101";
             this.checkBox101.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // startGameButton
             // 
-            this.button1.Location = new System.Drawing.Point(512, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Начать Игру";
-            this.button1.UseVisualStyleBackColor = true;
+            this.startGameButton.Location = new System.Drawing.Point(512, 95);
+            this.startGameButton.Name = "startGameButton";
+            this.startGameButton.Size = new System.Drawing.Size(115, 23);
+            this.startGameButton.TabIndex = 2;
+            this.startGameButton.Text = "Начать Игру";
+            this.startGameButton.UseVisualStyleBackColor = true;
+            this.startGameButton.Click += new System.EventHandler(this.startGameButton_Click);
             // 
             // shipsListComboBox
             // 
@@ -2735,16 +2740,26 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Расставьте корабли на поле";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(474, 135);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Создать Корабль";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ButtleShip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(655, 607);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.shipsListComboBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.startGameButton);
             this.Controls.Add(this.opponentBoardTableLayoutPanel);
             this.Controls.Add(this.userBoardtableLayoutPanel);
             this.Name = "ButtleShip";
@@ -2962,10 +2977,11 @@
         private System.Windows.Forms.CheckBox checkBox103;
         private System.Windows.Forms.CheckBox checkBox102;
         private System.Windows.Forms.CheckBox checkBox101;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button startGameButton;
         private System.Windows.Forms.ComboBox shipsListComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -4,8 +4,9 @@ using System.Text;
 
 namespace SeaWar
 {
-    public class ModelEventArgs : EventArgs
+    abstract class BoardBuilder
     {
-        public Point _point;
+        public abstract Board GetBoard();
+
     }
 }
