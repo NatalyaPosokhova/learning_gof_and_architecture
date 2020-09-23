@@ -36,10 +36,10 @@ namespace SeaWar
                 for (var candidateShipDeck = 0; candidateShipDeck < candidateDeckQuantity; candidateShipDeck++)
                     for (var currentShipDeck = 0; currentShipDeck < currentShip.DeckQuantity; currentShipDeck++)
                     {
-                        var candidateX = candidatePoint.x + candidateDirection == ShipDirection.Horizontal ? candidateShipDeck : 0;
-                        var candidateY = candidatePoint.y + candidateDirection == ShipDirection.Horizontal ? 0 : candidateShipDeck;
-                        var currentX = currentShip.Position.x + currentShip.Direction == ShipDirection.Horizontal ? currentShipDeck : 0;
-                        var currentY = currentShip.Position.y + currentShip.Direction == ShipDirection.Horizontal ? 0 : currentShipDeck;
+                        var candidateX = candidatePoint.x + (candidateDirection == ShipDirection.Horizontal ? candidateShipDeck : 0);
+                        var candidateY = candidatePoint.y + (candidateDirection == ShipDirection.Horizontal ? 0 : candidateShipDeck);
+                        var currentX = currentShip.Position.x + (currentShip.Direction == ShipDirection.Horizontal ? currentShipDeck : 0);
+                        var currentY = currentShip.Position.y + (currentShip.Direction == ShipDirection.Horizontal ? 0 : currentShipDeck);
                         if (candidateX == currentX && candidateY == currentY)
                         {
                             return false;
