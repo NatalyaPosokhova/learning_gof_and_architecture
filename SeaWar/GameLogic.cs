@@ -9,6 +9,7 @@ namespace SeaWar
     {
         private List<Player> _players;
         private List<Board> _boards;
+        
         public GameLogic(List<Player> Players, List<Board> Boards)
         {
             _players = Players;
@@ -25,12 +26,19 @@ namespace SeaWar
             }
             while (!_boards[0].IsAllShipsDied() || !_boards[1].IsAllShipsDied())
             {
+                _boards.ForEach(el => el.OnShootHappend += El_OnShootHappend);
+
                 var shootCoord = _players[0].GetShoot();
                 _boards[1].MakeShoot(shootCoord);
 
                 shootCoord = _players[1].GetShoot();
                 _boards[0].MakeShoot(shootCoord);
             }
+        }
+
+        private void El_OnShootHappend(object sender, ModelEventArgs e)
+        {
+            Console.WriteLine(e.shootStatus);
         }
     }
 }

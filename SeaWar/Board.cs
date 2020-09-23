@@ -5,8 +5,13 @@ using System.Threading.Tasks;
 
 namespace SeaWar
 {
+    public class ModelEventArgs : EventArgs
+    {
+        public string shootStatus;
+    }
     public class Board
     {
+        public event EventHandler<ModelEventArgs> OnShootHappend;
         private const int boardSize = 10;
         private List<Ship> shipsList = new List<Ship>();
         /// <summary>
@@ -85,13 +90,25 @@ namespace SeaWar
             {
                 if (currenShip.CheckShooting(shootCoord))
                 {
+                    OnShootHappend?.Invoke(this, new ModelEventArgs()
+                    {
+                        shootStatus = "Вы попали"
+                    });
                     if (currenShip.State == ShipState.Died)
                     {
+                        OnShootHappend?.Invoke(this, new ModelEventArgs()
+                        {
+                            shootStatus = "Корабль противника убит"
+                        });
                         shipsList.Remove(currenShip);
                     }
                     return true;
                 }
             }
+            OnShootHappend?.Invoke(this, new ModelEventArgs()
+            {
+                shootStatus = "Мимо"
+            });
             return false;
         }
         /// <summary>
